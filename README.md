@@ -15,7 +15,7 @@ LRGP enables turn-based and real-time multiplayer games to run over LoRa radios,
 - **Replay protection** — every envelope carries an 8-byte CSPRNG nonce; receivers maintain identity-scoped bounded LRUs with an absolute 10-minute TTL
 - **Participant binding** — every session is bound to its authenticated remote peer before state-changing actions are accepted
 - **Bounded admission** — unsolicited pending challenges are capped per participant and local identity without evicting active games
-- **Built-in games** — Tic-Tac-Toe, Chess (via `cozy-chess`), Four in a Row, Checkers, Hex, Gomoku, Reversi, Dots and Boxes, Mancala, Ultimate Tic-Tac-Toe, Go, and Battleship
+- **Built-in games** — Tic-Tac-Toe, Chess (via `cozy-chess`), Four in a Row, Checkers, Hex, Gomoku, Reversi, Dots and Boxes, Mancala, Ultimate Tic-Tac-Toe, Go, Battleship, and Quoridor
 
 ## Quick Start
 
@@ -62,6 +62,7 @@ src/
     ultimate_ttt.rs # Built-in Ultimate Tic-Tac-Toe (nine small boards)
     go.rs          # Built-in Go (9x9, area scoring, superko)
     battleship.rs  # Built-in Battleship (committed fleets, revealed at the end)
+    quoridor.rs    # Built-in Quoridor (9x9, ten walls each)
 ```
 
 ## Building a Game
